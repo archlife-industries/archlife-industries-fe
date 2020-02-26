@@ -6,12 +6,14 @@ import "./Navigation.css";
 const Navigation = props => {
   return (
     <nav className="navigation">
-      <NavLink className="navLinks logo" to="/">
-        Archlife Industries
-      </NavLink>
-      <NavLink className="navLinks" to="/demo">
-        Demo
-      </NavLink>
+      <div className="container">
+        <NavLink className="navLinks logo" to="/">
+          ARCHLIFE INDUSTRIES
+        </NavLink>
+        <NavLink className="navLinks" to="/demo">
+          DEMO
+        </NavLink>
+      </div>
     </nav>
   );
 };
