@@ -5,8 +5,8 @@ import "./Navigation.css";
 
 const Navigation = props => {
   return (
-    <nav className="navigation">
-      <div className="container">
+    <nav className="navigation sticky-top">
+      <div className="container navContainer">
         <NavLink className="navLinks logo" to="/">
           ARCHLIFE INDUSTRIES
         </NavLink>
