@@ -25,6 +25,14 @@ class App extends Component {
               />
             </div>
           </div>
+          <div className="loginContainer">
+            <h4 className="loginHeader">
+              <strong>ARCHLIFE LOGIN</strong>
+            </h4>
+            <button className="login-btn btn-text-color">
+              LOGIN (COMING SOON)
+            </button>
+          </div>
         </div>
         {/* <Route
           path="/demo"
