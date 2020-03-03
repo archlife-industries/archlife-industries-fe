@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Navigation from "./components/Navigation";
+import LogoContainer from "./components/LogoContainer";
+import LoginContainer from "./components/LoginContainer";
 
 class App extends Component {
   render() {
@@ -9,30 +11,8 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <div className="container app">
-          <div className="logoContainer">
-            <img
-              src={require("./public/Archlife-A-logo.png")}
-              width="300"
-              height="300"
-              alt="Large A logo of Archlife"
-              className="largeA"
-            />
-            <div className="colorfulLogo">
-              <img
-                src={require("./public/Archlife_color_logo.png")}
-                width="320"
-                alt="Colorful log of Archlife"
-              />
-            </div>
-          </div>
-          <div className="loginContainer">
-            <h4 className="loginHeader">
-              <strong>ARCHLIFE LOGIN</strong>
-            </h4>
-            <button className="login-btn btn-text-color">
-              LOGIN (COMING SOON)
-            </button>
-          </div>
+          <LogoContainer />
+          <LoginContainer />
         </div>
         {/* <Route
           path="/demo"

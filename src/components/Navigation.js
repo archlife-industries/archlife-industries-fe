@@ -11,7 +11,7 @@ const Navigation = props => {
           ARCHLIFE INDUSTRIES
         </NavLink>
         <NavLink className="navLinks" to="/demo">
-          DEMO
+          MAIN MENU
         </NavLink>
       </div>
     </nav>
