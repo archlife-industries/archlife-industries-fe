@@ -6,7 +6,7 @@ const LogoContainer = props => {
   return (
     <div className="logoContainer">
       <img
-        src={require("../public/Archlife-A-logo-new.png")}
+        src={require("../assets/Archlife-A-logo-new.png")}
         width="300"
         height="300"
         alt="Large A logo of Archlife"
@@ -14,7 +14,7 @@ const LogoContainer = props => {
       />
       <div className="colorfulLogo">
         <img
-          src={require("../public/Archlife_color_logo.png")}
+          src={require("../assets/Archlife_color_logo.png")}
           width="320"
           alt="Colorful log of Archlife"
         />

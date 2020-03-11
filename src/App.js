@@ -4,6 +4,7 @@ import "./App.css";
 import Navigation from "./components/Navigation";
 import LogoContainer from "./components/LogoContainer";
 import LoginContainer from "./components/LoginContainer";
+import LightComponent from "./components/LightBulbSwitch/LightComponent";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <div className="container app">
           <LogoContainer />
           <LoginContainer />
+          <LightComponent />
         </div>
         {/* <Route
           path="/demo"
