@@ -1,5 +1,19 @@
 
 /* EEG */
+.eggButtonContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color:white;
+    /*text-align: center;*/
+    background-color: black;
+    width: 400px;
+    height:500px;
+    padding:20px;
+}
+
 .eegButton {
-    margin-top: 3rem;
+    /*margin-top: 3rem;*/
 }

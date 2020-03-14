@@ -7,34 +7,41 @@ class EEGButton extends React.Component {
   static defaultProps = {
     images: { on, off }
   };
-  
+
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      state:'off'
-    }
-    this.handleClick = this.handleClick.bind(this)
+      state: "off"
+    };
+    this.handleClick = this.handleClick.bind(this);
+    this.stopRecording = this.stopRecording.bind(this);
   }
-  handleClick(e){
-    e.preventDefault()
-    this.setState({state: this.state.state === 'off' ? 'on' : 'off'})
-    if (this.state.state === 'off' ){
-      this.props.startRecording(false)
-    } else{
-      this.props.startRecording(true)
-    }
+
+  stopRecording() {
+    this.setState({
+      state: "off"
+    });
   }
-  
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.startRecording(this.state.state === "off");
+    this.setState({ state: this.state.state === "off" ? "on" : "off" });
+  }
+
   render() {
     return (
-        <button onClick={this.handleClick}  className="eegButton" >
+      <div className="eggButtonContainer">
+        <button onClick={this.handleClick} className="eegButton">
           <img
             src={this.props.images[this.state.state]}
             alt={`EEG Button is in ${this.props.state} state`}
-            style={{width:"300px", background:"black"}}
+            style={{ width: "300px", background: "black" }}
           />
-          
         </button>
+        <h1>{this.props.message}</h1>
+        <h1>{this.props.dir && this.props.dir.toUpperCase()}</h1>
+      </div>
     );
   }
 }
