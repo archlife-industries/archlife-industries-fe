@@ -2,24 +2,29 @@
 /* EEG */
 .thermostat-container {
     text-align: center;
-    margin-right:2rem;
-    padding:20px;
+    padding: 20px;
     border: 2px solid black;
-    justify-content: center;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    height: 800px;
+}
 
+.thermostat{
+    margin-top: 170px;
     position:relative;
 }
 
-.thermostat-container h1{
-    position:absolute;
-    margin-top:0;
+.thermostat .temperature{
+    position: absolute;
+    margin-top: 0;
     color: #111;
     text-shadow: 1px 2px 1px #282828;
     font-weight: bold;
-    font-size:3.2rem;
+    font-size: 3.2rem;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .thermostat-container button{
@@ -27,18 +32,21 @@
     height:50px;
     position:absolute;
     background:transparent;
-    outline: none;
+    outline: transparent;
     border: none;
     cursor: pointer;
+    left: 50%;
+    text-align: center;
 }
 
 .thermostat-container button.up{
-    top:70px;
+    top: 70px;
+    transform: translate(-50%, -50%);
 }
 .thermostat-container button.down{
-    bottom:70px;
+    bottom:30px;
+    transform: translate(-30px, -30px);
 }
-
 
 .thermostat-container button:hover{
     border: 1px solid blue;
@@ -50,7 +58,6 @@
     -moz-animation: neon-blue 1s ease infinite;
     -webkit-animation: neon-blue 1s ease infinite;
 }
-
 
 @keyframes neon-blue {
     0%,

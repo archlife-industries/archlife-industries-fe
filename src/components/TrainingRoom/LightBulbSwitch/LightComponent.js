@@ -19,14 +19,7 @@ class LightComponent extends React.Component {
 
   componentWillReceiveProps(nextProps, nextContext) {
     console.log("-----------componentWillReceiveProps -----------");
-    console.log("nextProps", nextProps);
-    console.log("this.props.dir", this.props.dir);
     if (nextProps.selected) {
-      if (this.state.state === 'off'){
-        this.props.setAllowableDirections(["up" ]);
-      }else{
-        this.props.setAllowableDirections(["down" ]);
-      }
       if (nextProps.dir === "up") {
         this.handleTurnOn();
       } else {
@@ -37,35 +30,28 @@ class LightComponent extends React.Component {
     }
   }
 
-  // shouldComponentUpdate(nextProps, nextState, nextContext) {
-  //   if (nextProps.selected) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
-
   handleTurnOn() {
     this.setState({
       state: "on"
     });
-    console.log("turn on");
   }
   handleTurnOff() {
     this.setState({
       state: "off"
     });
-    console.log("turn off");
   }
 
   render() {
     return (
       <div className={`light-container ${this.props.selected && "selected"}`}>
+        <h1 className={`tag ${this.state.state === 'on' && "on"}`}>LIGHT SWITCH</h1>
         <Lightbulb state={this.state.state} />
         <LightSwitch
           turnOn={this.handleTurnOn}
           turnOff={this.handleTurnOff}
           state={this.state.state}
         />
+       
       </div>
     );
   }

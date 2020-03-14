@@ -1,5 +1,26 @@
 
-@font-face {
-    font-family: neon;
-    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+.container.training{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.tag{
+    color:#282828;
+    position:absolute;
+    top:10px;
+    background: #28d7fe;
+    border-radius: 4px;
+    border:2px solid white;
+    box-shadow: 5px 5px 20px black;
+    opacity: 80%;
+    padding:1rem 2rem;
+}
+
+.tag.on{
+    color:black;
+    background: gold;
+    border-radius: 4px;
+    border:2px solid white;
+    box-shadow: 5px 5px 20px gold;
 }

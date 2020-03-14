@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = process.env.NODE_ENV !== "production" ? "http://localhost:5000" : "https://archlife-eeg.herokuapp.com/"
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+const BASE_URL = "https://archlife-eeg.herokuapp.com/"
 
 export default function (contentType ='application/json' ) {
 	return axios.create({

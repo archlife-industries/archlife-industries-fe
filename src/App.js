@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import {Route } from 'react-router-dom'
 import Navigation from "./components/Navigation";
-import LogoContainer from "./components/LogoContainer";
-import LoginContainer from "./components/LoginContainer";
 import TrainingRoom from "./components/TrainingRoom";
 import LandingPage from "./components/LandingPage";
 
@@ -20,7 +18,7 @@ class App extends Component {
         
         <Route
           path="/demo"
-          render={props => <TrainingRoom {...props}/>}
+          render={props => <TrainingRoom {...props} testing={false}/>}
         />
       </div>
     );
