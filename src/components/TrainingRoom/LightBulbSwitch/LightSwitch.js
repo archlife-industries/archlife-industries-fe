@@ -1,6 +1,6 @@
 import React from 'react'
-import on from '../../assets/lighbulb/lightSwitch-on.gif'
-import off from '../../assets/lighbulb/lightSwitch-off.gif'
+import on from '../../../assets/lighbulb/lightSwitch-on.gif'
+import off from '../../../assets/lighbulb/lightSwitch-off.gif'
 
 class LightSwitch extends React.Component{
   static defaultProps = {

@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import "./App.css";
-
+import {Route } from 'react-router-dom'
 import Navigation from "./components/Navigation";
 import LogoContainer from "./components/LogoContainer";
 import LoginContainer from "./components/LoginContainer";
-import LightComponent from "./components/LightBulbSwitch/LightComponent";
+import TrainingRoom from "./components/TrainingRoom";
+import LandingPage from "./components/LandingPage";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navigation />
-        <div className="container app">
-          <LogoContainer />
-          <LoginContainer />
-          <LightComponent />
-        </div>
-        {/* <Route
+        <Route
+          exact
+          path="/"
+          render={props => <LandingPage {...props}/>}
+        />
+        
+        <Route
           path="/demo"
-          render={props => <DrugForm {...props} addDrug={this.addDrug} />}
-        /> */}
+          render={props => <TrainingRoom {...props}/>}
+        />
       </div>
     );
   }
