@@ -1,15 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./Footer.css";
+
 const Footer = props => {
   return (
-    <footer className="footer footerContainer">
+    <footer className="footer footerContainer container">
       <div className="footerTop">
-        <NavLink to="/">HOME</NavLink>
-        <NavLink to="/">SOFTWARE</NavLink>
-        <NavLink to="/">DEMO</NavLink>
-        <NavLink to="/">ABOUT US</NavLink>
-        <NavLink to="/">INVEST</NavLink>
+        <NavLink className="navLinks" to="/">
+          HOME
+        </NavLink>
+        <NavLink className="navLinks" to="/">
+          SOFTWARE
+        </NavLink>
+        <NavLink className="navLinks" to="/">
+          DEMO
+        </NavLink>
+        <NavLink className="navLinks" to="/">
+          ABOUT US
+        </NavLink>
+        <NavLink className="navLinks" to="/">
+          INVEST
+        </NavLink>
       </div>
       <div>
         <div className="footerBottom">

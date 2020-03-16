@@ -1,0 +1,17 @@
+.footer {
+  background-color: #1c1c1c;
+  border: 1px solid #282828;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+}
