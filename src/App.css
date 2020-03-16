@@ -7,32 +7,32 @@
   margin-left: auto;
 }
 
-.container.navContainer{
-  height:37px;
+.container.navContainer {
+  height: 37px;
 }
 
-.container.training{
-  display:flex;
+.container.training {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 
-.container.landing{
-  display:flex;
+.container.landing {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.container.landing > h1{
-  display:inline-block;
-  padding-top:20px;
+.container.landing > h1 {
+  display: inline-block;
+  padding-top: 20px;
   font-size: 24px;
-  color:deeppink;
+  color: white;
 }
-.container.landing > a{
-  color:white;
+.container.landing > a {
+  color: white;
 }
 
 .App {
