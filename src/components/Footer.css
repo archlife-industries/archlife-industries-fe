@@ -15,3 +15,38 @@
   display: flex;
   justify-content: space-between;
 }
+
+.footerBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footerSocial {
+  display: flex;
+  flex-direction: row;
+}
+
+/* min-width is mobile first smallest - > biggest */
+@media (min-width: 480px) {
+  .container {
+    max-width: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

@@ -43,10 +43,34 @@ const Footer = props => {
             />
           </div>
           <div className="footerSocial">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+              <img
+                src={require("../assets/Social_Icons/twitter.png")}
+                width="40"
+                height="40"
+              />
+            </div>
+            <div>
+              <img
+                src={require("../assets/Social_Icons/github.png")}
+                width="40"
+                height="40"
+              />
+            </div>
+            <div>
+              <img
+                src={require("../assets/Social_Icons/linkedin.png")}
+                width="40"
+                height="40"
+              />
+            </div>
+            <div>
+              <img
+                src={require("../assets/Social_Icons/youtube.png")}
+                width="40"
+                height="40"
+              />
+            </div>
           </div>
         </div>
       </div>
