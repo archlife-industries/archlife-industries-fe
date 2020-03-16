@@ -6,6 +6,11 @@
   justify-content: center;
 }
 
+.footerLine {
+  width: 80%;
+  border: solid 1px black;
+}
+
 .footerLinks {
   text-decoration: none;
   color: #3dbfe8;
@@ -32,6 +37,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.footerCopyright {
+  color: #999999;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerCopyright > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.copyrightEmail:hover {
+  border-bottom: solid 1px #999999;
+  transition: border-bottom 0.2s;
 }
 
 .footerSocial {

@@ -23,13 +23,14 @@ const Footer = props => {
           INVEST
         </NavLink>
       </div>
+      <hr className="footerLine" />
       <div>
         <div className="footerBottom">
           <div className="footerCopyright">
             <p>
               <strong>Archlife Industries© 2020</strong>
             </p>
-            <a href="mailto:info@archlife.org">
+            <a href="mailto:info@archlife.org" className="copyrightEmail">
               <strong>info@Archlife.org</strong>
             </a>
           </div>
