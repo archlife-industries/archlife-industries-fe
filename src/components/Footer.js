@@ -7,21 +7,21 @@ const Footer = props => {
   return (
     <footer className="footer footerContainer container">
       <div className="footerTop">
-        <NavLink className="footerLinks" to="/">
+        <a href="https://archlife.org/" className="footerLinks">
           HOME
-        </NavLink>
-        <NavLink className="footerLinks" to="/">
+        </a>
+        <a href="https://archlife.org/archlife/" className="footerLinks">
           SOFTWARE
-        </NavLink>
-        <NavLink className="footerLinks" to="/">
+        </a>
+        <a href="https://archlife.org/archlife/demo/" className="footerLinks">
           DEMO
-        </NavLink>
-        <NavLink className="footerLinks" to="/">
+        </a>
+        <a href="https://archlife.org/about-us/" className="footerLinks">
           ABOUT US
-        </NavLink>
-        <NavLink className="footerLinks" to="/">
+        </a>
+        <a href="https://archlife.org/invest/" className="footerLinks">
           INVEST
-        </NavLink>
+        </a>
       </div>
       <hr className="footerLine" />
       <div>
@@ -52,6 +52,7 @@ const Footer = props => {
                   src={require("../assets/Social_Icons/twitter.png")}
                   width="40"
                   height="40"
+                  alt="social media icon"
                 />
               </a>
             </div>
@@ -61,6 +62,7 @@ const Footer = props => {
                   src={require("../assets/Social_Icons/github.png")}
                   width="40"
                   height="40"
+                  alt="social media icon"
                 />
               </a>
             </div>
@@ -70,6 +72,7 @@ const Footer = props => {
                   src={require("../assets/Social_Icons/linkedin.png")}
                   width="40"
                   height="40"
+                  alt="social media icon"
                 />
               </a>
             </div>
@@ -79,6 +82,7 @@ const Footer = props => {
                   src={require("../assets/Social_Icons/youtube.png")}
                   width="40"
                   height="40"
+                  alt="social media icon"
                 />
               </a>
             </div>
