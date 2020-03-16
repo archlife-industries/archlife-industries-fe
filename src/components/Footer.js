@@ -30,15 +30,17 @@ const Footer = props => {
             <p>
               <strong>Archlife Industries© 2020</strong>
             </p>
-            <a href="mailto:info@archlife.org" className="copyrightEmail">
-              <strong>info@Archlife.org</strong>
-            </a>
+            <div>
+              <a href="mailto:info@archlife.org" className="copyrightEmail">
+                <strong>info@Archlife.org</strong>
+              </a>
+            </div>
           </div>
           <div className="footerLogo">
             <img
               src={require("../assets/Archlife-A-logo-new.png")}
-              width="300"
-              height="300"
+              width="110"
+              height="110"
               alt="Large A logo of Archlife"
               className="largeA"
             />
