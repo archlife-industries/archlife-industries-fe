@@ -7,19 +7,19 @@ const Footer = props => {
   return (
     <footer className="footer footerContainer container">
       <div className="footerTop">
-        <NavLink className="navLinks" to="/">
+        <NavLink className="footerLinks" to="/">
           HOME
         </NavLink>
-        <NavLink className="navLinks" to="/">
+        <NavLink className="footerLinks" to="/">
           SOFTWARE
         </NavLink>
-        <NavLink className="navLinks" to="/">
+        <NavLink className="footerLinks" to="/">
           DEMO
         </NavLink>
-        <NavLink className="navLinks" to="/">
+        <NavLink className="footerLinks" to="/">
           ABOUT US
         </NavLink>
-        <NavLink className="navLinks" to="/">
+        <NavLink className="footerLinks" to="/">
           INVEST
         </NavLink>
       </div>

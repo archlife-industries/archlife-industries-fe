@@ -6,6 +6,18 @@
   justify-content: center;
 }
 
+.footerLinks {
+  text-decoration: none;
+  color: #3dbfe8;
+  font-weight: 400;
+  font-size: 0.809375rem;
+}
+
+.footerLinks:hover {
+  color: white;
+  transition: color 0.2s linear;
+}
+
 .footerContainer {
   display: flex;
   flex-direction: column;
@@ -13,7 +25,7 @@
 
 .footerTop {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .footerBottom {
