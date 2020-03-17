@@ -42,7 +42,7 @@ const Footer = props => {
               width="110"
               height="110"
               alt="Large A logo of Archlife"
-              className="largeA"
+              className="footerA"
             />
           </div>
           <div className="footerSocial">

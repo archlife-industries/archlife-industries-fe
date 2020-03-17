@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const authAxios = () => {
-  const token = "Token " + localStorage.getItem("key");
+  const token = localStorage.getItem("token");
   // console.log('token !! ', token);
 
   return axios.create({

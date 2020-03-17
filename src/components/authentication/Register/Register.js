@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import authAxios from "../utils/authAxios";
-import { Link } from "react-router-dom";
-import "../authStyles.css";
+import axios from "axios";
+import "../loginStyles.css";
 
-const Login = props => {
+const Register = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -16,13 +15,13 @@ const Login = props => {
     });
   };
 
-  const userLogin = e => {
+  const userRegistration = e => {
     e.preventDefault();
-    authAxios()
-      .post(`https://archlife-be.herokuapp.com/api/auth/login`, user)
+    axios
+      .post(`https://archlife-be.herokuapp.com/api/auth/register`, user)
       .then(res => {
         console.log(res);
-        props.history.push("/demo");
+        props.history.push("/login");
       })
       .catch(err => console.log(err, "for sure error"));
   };
@@ -31,9 +30,9 @@ const Login = props => {
     <div className="container">
       <div className="inner-container">
         <div className="box">
-          <h1>Login</h1>
-          <form onSubmit={userLogin}>
-            <label>email</label> <br />
+          <h1>Register</h1>
+          <form onSubmit={userRegistration}>
+            <label>email address</label> <br />
             <input
               name="email"
               placeholder="email"
@@ -45,21 +44,14 @@ const Login = props => {
             <br />
             <label>password</label> <br />
             <input
-              name="password"
+              name="password1"
               placeholder="password"
               type="password"
               onChange={userInput}
               value={user.password}
               autoComplete="off"
             />
-            <br />
-            <button>Login</button>
-            <p>
-              Not a member?{" "}
-              <Link to="/register">
-                <span>Sign Up</span>
-              </Link>
-            </p>
+            <button>Register</button>
           </form>
         </div>
       </div>
@@ -67,4 +59,4 @@ const Login = props => {
   );
 };
 
-export default Login;
+export default Register;

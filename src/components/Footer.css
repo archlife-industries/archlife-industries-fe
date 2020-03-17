@@ -1,15 +1,10 @@
 .footer {
-  position:absolute;
-  left:50%;
-  right:50%;
-  transform:translate(-50%, -50%);
-  bottom:0;
   text-align: center;
-  width:100%;
+  width: 100%;
   background-color: #1c1c1c;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5vh;
 }
 
 .footerLine {
@@ -54,6 +49,10 @@
   align-items: center;
   font-size: 1rem;
   line-height: 0.6rem;
+}
+
+.footerA {
+  padding-right: 30px;
 }
 
 .footerCopyright > div > a {

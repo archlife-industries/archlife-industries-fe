@@ -17,7 +17,6 @@ class LandingPage extends Component {
         </h1>
         <Link to="/demo">Main Menu</Link>
         <Footer />
-        {/*<LoginContainer />*/}
       </div>
     );
   }
