@@ -11,15 +11,13 @@
   height: 37px;
 }
 
-<<<<<<< HEAD
-=======
+
 .container.training {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
->>>>>>> master
 
 .container.landing {
   display: flex;
@@ -40,6 +38,8 @@
 
 .App {
   background-color: #1c1c1c;
+  height:100vh;
+  position:relative;
 }
 
 .app {
