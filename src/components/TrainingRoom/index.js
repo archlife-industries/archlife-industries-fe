@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import LightComponent from "./LightBulbSwitch/LightComponent";
 import EEGButton from "./EEGButton/EEGButton";
 import API from "../../utils/API";
-import Thermostats from "./Thermostats/Thermostats";
+import Thermostat from "./Thermostat/Thermostat";
 import "./index.css";
 
 class TrainingRoom extends Component {
   static defaultProps = {
-    widgets: { left: LightComponent, right: Thermostats },
+    widgets: { left: LightComponent, right: Thermostat },
     directions: ["left", "right", "up", "down"],
     
     testing:false
@@ -106,7 +106,7 @@ class TrainingRoom extends Component {
   };
   render() {
     return (
-      <div className="container training">
+      <div className="training-container">
         <LightComponent
           selected={this.state.selectedWidget === LightComponent}
           dir={this.state.direction}
@@ -118,8 +118,8 @@ class TrainingRoom extends Component {
           dir={this.state.direction}
           ref={this.eegRef}
         />
-        <Thermostats
-          selected={this.state.selectedWidget === Thermostats}
+        <Thermostat
+          selected={this.state.selectedWidget === Thermostat}
           dir={this.state.direction}
           setAllowableDirections={this.handleSetAllowableDirecitons}
         />

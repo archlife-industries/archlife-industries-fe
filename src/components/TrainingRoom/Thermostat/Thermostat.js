@@ -1,8 +1,8 @@
 import React from "react";
 import panel from "../../../assets/thermostat/thermostats.png";
-import "./Thermostats.css";
+import "./Thermostat.css";
 
-class Thermostats extends React.Component {
+class Thermostat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,7 @@ class Thermostats extends React.Component {
       <div
         className={`thermostat-container ${this.props.selected && "selected"}`}
       >
-        <h1 className={`tag ${this.props.selected=== "on" && "on"}`}>
+        <h1 className={`tag ${this.props.selected  && "on"}`}>
           THERMOSTAT
         </h1>
         <div className="thermostat">
@@ -63,4 +63,4 @@ class Thermostats extends React.Component {
   }
 }
 
-export default Thermostats;
+export default Thermostat;

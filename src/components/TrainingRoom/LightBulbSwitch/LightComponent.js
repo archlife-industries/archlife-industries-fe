@@ -44,7 +44,7 @@ class LightComponent extends React.Component {
   render() {
     return (
       <div className={`light-container ${this.props.selected && "selected"}`}>
-        <h1 className={`tag ${this.state.state === 'on' && "on"}`}>LIGHT SWITCH</h1>
+        <h1 className={`tag ${this.props.selected  && "on"}`}>LIGHT SWITCH</h1>
         <Lightbulb state={this.state.state} />
         <LightSwitch
           turnOn={this.handleTurnOn}

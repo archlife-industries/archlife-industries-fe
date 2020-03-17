@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LogoContainer from "./LogoContainer";
-import EEGButton from "./TrainingRoom/EEGButton/EEGButton";
-import API from "../utils/API";
+import Footer from "./Footer";
 
 class LandingPage extends Component {
   render() {
@@ -17,7 +16,7 @@ class LandingPage extends Component {
           proof-of-concept).
         </h1>
         <Link to="/demo">Main Menu</Link>
-
+        <Footer />
         {/*<LoginContainer />*/}
       </div>
     );
