@@ -44,7 +44,7 @@ const Register = props => {
             <br />
             <label>password</label> <br />
             <input
-              name="password1"
+              name="password"
               placeholder="password"
               type="password"
               onChange={userInput}
