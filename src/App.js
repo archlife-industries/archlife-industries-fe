@@ -14,8 +14,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Route exact path="/" render={props => <LandingPage {...props} />} />
-        <Route path="/demo" render={props => <TrainingRoom {...props} />} />
-        <Footer />
+        <Route path="/demo" render={props => <TrainingRoom {...props} testing={true}/>} />
       </div>
     );
   }

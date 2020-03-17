@@ -9,7 +9,7 @@ class Lightbulb extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="lightBulb-container">
         <img
           src={this.props.images[this.props.state]}
           alt={`light bulb is ${this.props.state}`}

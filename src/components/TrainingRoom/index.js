@@ -1,42 +1,142 @@
 import React, { Component } from "react";
-
 import LightComponent from "./LightBulbSwitch/LightComponent";
 import EEGButton from "./EEGButton/EEGButton";
 import API from "../../utils/API";
+import Thermostat from "./Thermostat/Thermostat";
+import "./index.css";
 
 class TrainingRoom extends Component {
+  static defaultProps = {
+    widgets: { left: LightComponent, right: Thermostat },
+    directions: ["left", "right", "up", "down"],
+    
+    testing:false
+  };
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      state:'off'
-    }
+      recording: false,
+      state: "off",
+      selectedWidget: null,
+      eegMessage: "Press to record your brainwave",
+      direction: null,
+      allowedDirections:['left','right']
+    };
   }
+
+  eegRef = React.createRef();
+
+  generateDirecitonMessage = directions => {
+    return this.state.allowedDirections.reduce((message, item, index) => {
+      if (index === 0) {
+        message += " " + item.toUpperCase();
+      } else {
+        message += " | " + item.toUpperCase();
+      }
+      return message;
+    },'');
+  };
   
-  handleStartRecording = (isTrue)=>{
-    let duration = 1000
-    if (isTrue){
-      API()
-        .get(`/${duration}`)
-        .then(res =>{
-          console.log('result is back', res.data)
-          // 2, 3, 4, or 5.
-          //           // Two Meaning — UP
-          //           // Three meaning — DOWN
-          //           // Four Meaning — LEFT
-          //           // Five Meaning — RIGHT (edited)
-        })
-        .catch(error =>{
-          console.log(`error ${error} has occurred`)
-        })
-    }
+  handleSetAllowableDirections = (arr)=>{
+    this.setState({allowedDirections:[...arr]})
   }
+
+  handleStartRecording = (isTrue) => {
+    if (this.props.testing) {
+      if (isTrue) {
+        const result = new Promise(resolve => {
+          let dir, index;
+          index = Math.floor(Math.random() * this.state.allowedDirections.length);
+          dir = this.state.allowedDirections[index];
+          console.log(" this.state.directions", this.state.allowedDirections);
+          
+          setTimeout(() => {
+            resolve({ dir });
+          },1000);
+        }).then(res => {
+          if (res.dir === "left" || res.dir === "right") {
+            this.setState(() => ({
+              selectedWidget: this.props.widgets[res.dir],
+              direction: res.dir,
+              eegMessage: "Press to record your brainwave and think",
+              dirMessage: this.generateDirecitonMessage()
+             
+            }));
+          } else {
+            this.setState(() => ({
+              direction: res.dir,
+              eegMessage: "Press to record your brainwave and think",
+              dirMessage: this.generateDirecitonMessage()
+            }));
+          }
+
+          console.log("eegRef.ref", this.eegRef);
+         this.eegRef.current.stopRecording();
+        });
+      } else {
+        this.setState(() => ({
+          recording: false,
+          eegMessage: "Press to record your brainwave and think",
+          dirMessage: this.generateDirecitonMessage()
+        }));
+      }
+    } else {
+      if (isTrue) {
+        API()
+          .get(`/`)
+          .then(res => {
+            if (res.data === "left" || res.data === "right") {
+              this.setState(() => ({
+                selectedWidget: this.props.widgets[res.dir],
+                direction: res.data,
+                eegMessage: "Press to record your brainwave and think",
+                dirMessage: this.generateDirecitonMessage()
+      
+              }));
+            } else {
+              this.setState(() => ({
+                direction: res.data,
+                eegMessage: "Press to record your brainwave and think",
+                dirMessage: this.generateDirecitonMessage()
+              }));
+            }
+
+            console.log("eegRef.ref", this.eegRef);
+            this.eegRef.current.stopRecording();
+          })
+          .catch(error => {
+            console.log(`error ${error} has occurred`);
+          });
+      } else {
+        this.setState(() => ({
+          recording: false,
+          eegMessage: "Press to record your brainwave and think",
+          dirMessage: this.generateDirecitonMessage()
+        }));
+      }
+    }
+  };
   render() {
     return (
-      <div className="container training">
-        <LightComponent />
-        <EEGButton startRecording={this.handleStartRecording}/>
+      <div className="training-container">
+        <LightComponent
+          selected={this.state.selectedWidget === LightComponent}
+          dir={this.state.direction}
+          setAllowableDirections={this.handleSetAllowableDirections}
+        />
+        <EEGButton
+          startRecording={this.handleStartRecording}
+          message={this.state.eegMessage}
+          dir={this.state.direction}
+          dirMessage={this.state.dirMessage}
+          ref={this.eegRef}
+        />
+        <Thermostat
+          selected={this.state.selectedWidget === Thermostat}
+          dir={this.state.direction}
+          setAllowableDirections={this.handleSetAllowableDirections}
+        />
       </div>
-      
     );
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import on from '../../../assets/lighbulb/lightSwitch-on.gif'
 import off from '../../../assets/lighbulb/lightSwitch-off.gif'
+import "./LightBulbSwitch.css";
 
 class LightSwitch extends React.Component{
   static defaultProps = {
@@ -24,8 +25,8 @@ class LightSwitch extends React.Component{
   
   render(){
     return(
-      <div>
-        <img src={this.props.images[this.state.state]} alt={`light bulb is ${this.state.state}`}
+      <div className="switch">
+        <img src={this.props.images[this.props.state]} alt={`light bulb is ${this.props.state}`}
           onClick={this.handleClick}
         />
       </div>
