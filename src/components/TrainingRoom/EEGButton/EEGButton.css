@@ -1,5 +1,42 @@
 
 /* EEG */
+.eggButtonContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    /*text-align: center;*/
+    background-color: black;
+    width: 400px;
+    height:500px;
+    padding:20px;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.dirMessage{
+    color: #28d7fe;
+}
+
+.selectedMessage{
+    display:none;
+}
+
+.selectedMessage span{
+   color:#FF69B4;
+}
+
 .eegButton {
-    margin-top: 3rem;
+    background: transparent;
+    outline:none;
+    border: 1px solid transparent;
+}
+.eegButton:hover {
+    background: transparent;
+    border: 1px solid #28d7fe;
+    outline:none;
+    box-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+    0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
 }

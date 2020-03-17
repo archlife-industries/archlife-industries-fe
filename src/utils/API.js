@@ -1,14 +1,15 @@
 import axios from 'axios'
 
-const BASE_URL = process.env.NODE_ENV !== "production" ? "http://localhost:5000" : "https://archlife-eeg.herokuapp.com/"
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+const BASE_URL = "https://archlife-eeg.herokuapp.com/"
 
 export default function (contentType ='application/json' ) {
+	const token = localStorage.getItem('token')
 	return axios.create({
 		baseURL:BASE_URL,
 		timeout:80000,
 		headers:{
-			'Content-Type': contentType
+			'Content-Type': contentType,
+			'Authorization':`Bearer ${token}`
 		}
 	})
 }
