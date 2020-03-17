@@ -46,7 +46,7 @@ class Thermostats extends React.Component {
         className={`thermostat-container ${this.props.selected && "selected"}`}
       >
         <h1 className={`tag ${this.props.selected=== "on" && "on"}`}>
-          THERMOSTATS
+          THERMOSTAT
         </h1>
         <div className="thermostat">
           <img
