@@ -19,57 +19,65 @@ class TrainingRoom extends Component {
       state: "off",
       selectedWidget: null,
       eegMessage: "Press to record your brainwave",
-      direction: null
+      direction: null,
+      allowedDirections:['left','right']
     };
   }
 
   eegRef = React.createRef();
 
-  generateEegMessage = directions => {
-    return directions.reduce((message, item, index) => {
+  generateDirecitonMessage = directions => {
+    return this.state.allowedDirections.reduce((message, item, index) => {
       if (index === 0) {
         message += " " + item.toUpperCase();
       } else {
-        message += " or " + item.toUpperCase();
+        message += " | " + item.toUpperCase();
       }
       return message;
-    }, "Now think of a direction");
+    },'');
   };
+  
+  handleSetAllowableDirections = (arr)=>{
+    this.setState({allowedDirections:[...arr]})
+  }
 
   handleStartRecording = (isTrue) => {
-    console.log("-----------handleStartRecording -----------");
     if (this.props.testing) {
       if (isTrue) {
         const result = new Promise(resolve => {
           let dir, index;
-          index = Math.floor(Math.random() * this.props.directions.length);
-          dir = this.props.directions[index];
-          console.log(" this.state.directions", this.props.directions);
-
+          index = Math.floor(Math.random() * this.state.allowedDirections.length);
+          dir = this.state.allowedDirections[index];
+          console.log(" this.state.directions", this.state.allowedDirections);
+          
           setTimeout(() => {
             resolve({ dir });
-          },300);
+          },1000);
         }).then(res => {
           if (res.dir === "left" || res.dir === "right") {
             this.setState(() => ({
               selectedWidget: this.props.widgets[res.dir],
               direction: res.dir,
-              eegMessage: "Press to record your brainwave"
+              eegMessage: "Press to record your brainwave and think",
+              dirMessage: this.generateDirecitonMessage()
+             
             }));
           } else {
             this.setState(() => ({
               direction: res.dir,
-              eegMessage: "Press to record your brainwave"
+              eegMessage: "Press to record your brainwave and think",
+              dirMessage: this.generateDirecitonMessage()
             }));
           }
 
           console.log("eegRef.ref", this.eegRef);
-          this.eegRef.current.stopRecording();
+         this.eegRef.current.stopRecording();
         });
       } else {
         this.setState(() => ({
           recording: false,
-          eegMessage: "Press to record your brainwave"
+          eegMessage: "Press to record your brainwave and think",
+          dirMessage: this.generateDirecitonMessage()
         }));
       }
     } else {
@@ -79,14 +87,17 @@ class TrainingRoom extends Component {
           .then(res => {
             if (res.data === "left" || res.data === "right") {
               this.setState(() => ({
-                selectedWidget: this.props.widgets[res.data],
+                selectedWidget: this.props.widgets[res.dir],
                 direction: res.data,
-                eegMessage: "Press to record your brainwave"
+                eegMessage: "Press to record your brainwave and think",
+                dirMessage: this.generateDirecitonMessage()
+      
               }));
             } else {
               this.setState(() => ({
                 direction: res.data,
-                eegMessage: "Press to record your brainwave"
+                eegMessage: "Press to record your brainwave and think",
+                dirMessage: this.generateDirecitonMessage()
               }));
             }
 
@@ -99,7 +110,8 @@ class TrainingRoom extends Component {
       } else {
         this.setState(() => ({
           recording: false,
-          eegMessage: "Press to record your brainwave"
+          eegMessage: "Press to record your brainwave and think",
+          dirMessage: this.generateDirecitonMessage()
         }));
       }
     }
@@ -110,18 +122,19 @@ class TrainingRoom extends Component {
         <LightComponent
           selected={this.state.selectedWidget === LightComponent}
           dir={this.state.direction}
-          setAllowableDirections={this.handleSetAllowableDirecitons}
+          setAllowableDirections={this.handleSetAllowableDirections}
         />
         <EEGButton
           startRecording={this.handleStartRecording}
           message={this.state.eegMessage}
           dir={this.state.direction}
+          dirMessage={this.state.dirMessage}
           ref={this.eegRef}
         />
         <Thermostat
           selected={this.state.selectedWidget === Thermostat}
           dir={this.state.direction}
-          setAllowableDirections={this.handleSetAllowableDirecitons}
+          setAllowableDirections={this.handleSetAllowableDirections}
         />
       </div>
     );

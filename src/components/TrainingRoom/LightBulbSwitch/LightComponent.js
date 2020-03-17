@@ -11,7 +11,6 @@ class LightComponent extends React.Component {
     super(props);
     this.state = {
       state: "off",
-      allowedDirections: ["up", "down"]
     };
     this.handleTurnOn = this.handleTurnOn.bind(this);
     this.handleTurnOff = this.handleTurnOff.bind(this);
@@ -29,7 +28,11 @@ class LightComponent extends React.Component {
       }
     }
   }
-
+  componentDidUpdate(prevProps, prevState) {
+    if ((prevProps.selected !== this.props.selected) && this.props.selected) {
+        this.props.setAllowableDirections([ "right", "left", "up", "down"]);
+    }
+  }
   handleTurnOn() {
     this.setState({
       state: "on"
@@ -45,13 +48,15 @@ class LightComponent extends React.Component {
     return (
       <div className={`light-container ${this.props.selected && "selected"}`}>
         <h1 className={`tag ${this.props.selected  && "on"}`}>LIGHT SWITCH</h1>
+        <p className={`direction up ${this.props.selected && "show"}`}>UP</p>
         <Lightbulb state={this.state.state} />
         <LightSwitch
           turnOn={this.handleTurnOn}
           turnOff={this.handleTurnOff}
           state={this.state.state}
         />
-       
+  
+        <p className={`direction ${this.props.selected && "show"}`}>DOWN</p>
       </div>
     );
   }

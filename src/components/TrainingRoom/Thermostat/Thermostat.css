@@ -9,9 +9,10 @@
 }
 
 .thermostat{
-    margin-top: 170px;
+    margin-top: 250px;
     position:relative;
 }
+
 
 .thermostat .temperature{
     position: absolute;

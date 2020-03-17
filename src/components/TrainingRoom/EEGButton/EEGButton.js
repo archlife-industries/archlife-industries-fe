@@ -40,7 +40,8 @@ class EEGButton extends React.Component {
           />
         </button>
         <h1>{this.props.message}</h1>
-        <h1>{this.props.dir && this.props.dir.toUpperCase()}</h1>
+        <h1 className="dirMessage">{this.props.dirMessage}</h1>
+        <h1 className={`selectedMessage ${this.props.dir && "show"}`}>You Selected <span>{this.props.dir && this.props.dir.toUpperCase()}</span></h1>
       </div>
     );
   }

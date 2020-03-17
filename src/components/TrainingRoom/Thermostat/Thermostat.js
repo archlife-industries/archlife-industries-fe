@@ -12,7 +12,6 @@ class Thermostat extends React.Component {
     this.handleDown = this.handleDown.bind(this);
   }
   componentWillReceiveProps(nextProps, nextContext) {
-    console.log("-----------componentWillReceiveProps -----------");
     if (nextProps.selected) {
       if (nextProps.dir === "up") {
         this.handleUp();
@@ -21,6 +20,12 @@ class Thermostat extends React.Component {
           this.handleDown();
         }
       }
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.selected !== this.props.selected && this.props.selected) {
+      this.props.setAllowableDirections([ "right", "left", "up", "down"]);
+        // this.props.setAllowableDirections(["up", "down", "left"]);
     }
   }
   handleUp() {
@@ -45,9 +50,8 @@ class Thermostat extends React.Component {
       <div
         className={`thermostat-container ${this.props.selected && "selected"}`}
       >
-        <h1 className={`tag ${this.props.selected  && "on"}`}>
-          THERMOSTAT
-        </h1>
+      <p className={`direction up ${this.props.selected && "show"}`}>UP</p>
+        <h1 className={`tag ${this.props.selected && "on"}`}>THERMOSTAT</h1>
         <div className="thermostat">
           <img
             src={panel}
@@ -58,7 +62,9 @@ class Thermostat extends React.Component {
           <button className="up" onClick={this.handleUp}></button>
           <button className="down" onClick={this.handleDown}></button>
         </div>
-      </div>
+        <p className={`direction ${this.props.selected && "show"}`}>DOWN</p>
+        {/*<p className={`direction ${this.props.selected && "show"}`}>{this.props.dir && this.props.dir.toUpperCase()}</p>*/}
+  </div>
     );
   }
 }
