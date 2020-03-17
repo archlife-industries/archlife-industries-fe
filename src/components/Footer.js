@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = props => {
   return (
-    <footer className="footer footerContainer container">
+    <footer className="footer container">
       <div className="footerTop">
         <a href="https://archlife.org/" className="footerLinks">
           HOME
