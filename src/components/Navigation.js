@@ -17,6 +17,12 @@ const Navigation = props => {
         <NavLink className="navLinks" to="/demo">
           MAIN MENU
         </NavLink>
+        <NavLink className="navLinks" to="/login">
+          Login
+        </NavLink>
+        <NavLink className="navLinks" to="/register">
+          Register
+        </NavLink>
       </div>
     </nav>
   );

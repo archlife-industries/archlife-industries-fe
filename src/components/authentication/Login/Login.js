@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import authAxios from "../utils/authAxios";
+import authAxios from "../../../utils/authAxios";
 import { Link } from "react-router-dom";
 import "../authStyles.css";
 
@@ -29,7 +29,7 @@ const Login = props => {
   };
 
   return (
-    <div className="container">
+    <div className="authContainer">
       <div className="inner-container">
         <div className="box">
           <h1>Login</h1>

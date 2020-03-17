@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../loginStyles.css";
+import "../authStyles.css";
 
 const Register = props => {
   const [user, setUser] = useState({
@@ -27,12 +27,12 @@ const Register = props => {
   };
 
   return (
-    <div className="container">
+    <div className="authContainer">
       <div className="inner-container">
         <div className="box">
           <h1>Register</h1>
           <form onSubmit={userRegistration}>
-            <label>email address</label> <br />
+            <label>email</label> <br />
             <input
               name="email"
               placeholder="email"
@@ -51,6 +51,7 @@ const Register = props => {
               value={user.password}
               autoComplete="off"
             />
+            <br />
             <button>Register</button>
           </form>
         </div>

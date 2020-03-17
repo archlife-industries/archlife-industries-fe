@@ -1,25 +1,22 @@
-.container {
-  position: relative;
-  height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1446553009413-64b9505cacb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2500&q=80);
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
-  overflow: hidden;
+.authContainer {
+  /* position: relative; */
+  height: 95vh;
 }
 .inner-container {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: calc(50vh - 200px);
-  left: calc(50vw - 200px);
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: calc(50vh);
+  left: calc(50vw); */
+  /* overflow: hidden; */
 }
 .box {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  font-family: Helvetica;
+  height: 400px;
+  width: 500px;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 0px;

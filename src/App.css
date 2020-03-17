@@ -5,6 +5,7 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  height: 100vh;
 }
 
 .container.navContainer {
@@ -23,7 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: justify;
+  overflow: hidden;
 }
 
 .container.landing > h1 {
@@ -31,6 +32,7 @@
   padding-top: 20px;
   font-size: 24px;
   color: white;
+  text-align: justify;
 }
 .container.landing > a {
   color: white;
