@@ -6,6 +6,11 @@ import "./Footer.css";
 const Footer = props => {
   return (
     <footer className="footer container">
+      <img
+        src={require("../assets/footer_border.png")}
+        alt="footer Border"
+        className="navFooterBorder"
+      />
       <div className="footerTop">
         <a href="https://archlife.org/" className="footerLinks">
           HOME
