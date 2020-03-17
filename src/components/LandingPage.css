@@ -1,19 +1,19 @@
 /* Logo Container */
 .logoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
-    margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  margin-top: 15rem;
 }
 
 .largeA {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .colorfulLogo {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }

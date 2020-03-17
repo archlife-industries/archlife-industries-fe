@@ -8,7 +8,11 @@ const Navigation = props => {
     <nav className="navigation sticky-top">
       <div className="container navContainer">
         <NavLink className="navLinks logo" to="/">
-          ARCHLIFE INDUSTRIES
+          <img
+            src={require("../assets/Archlife_color_logo.png")}
+            height="40"
+            alt="Color logo of Archlife"
+          />
         </NavLink>
         <NavLink className="navLinks" to="/demo">
           MAIN MENU
