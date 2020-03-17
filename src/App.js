@@ -18,7 +18,7 @@ class App extends Component {
         
         <Route
           path="/demo"
-          render={props => <TrainingRoom {...props} testing={false}/>}
+          render={props => <TrainingRoom {...props} testing={true}/>}
         />
       </div>
     );

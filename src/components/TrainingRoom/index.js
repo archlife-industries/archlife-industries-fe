@@ -9,6 +9,7 @@ class TrainingRoom extends Component {
   static defaultProps = {
     widgets: { left: LightComponent, right: Thermostats },
     directions: ["left", "right", "up", "down"],
+    
     testing:false
   };
   constructor(props) {
