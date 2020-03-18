@@ -8,7 +8,6 @@ import TrainingRoom from "./components/TrainingRoom";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/authentication/Login/Login";
 import Register from "./components/authentication/Register/Register";
-import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
@@ -23,7 +22,6 @@ class App extends Component {
           path="/demo"
           render={props => <TrainingRoom {...props} testing={true} />}
         />
-        <Footer />
       </div>
     );
   }
