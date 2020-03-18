@@ -15,7 +15,6 @@ class LandingPage extends Component {
           one specific EEG-device product will be supported because it’s a
           proof-of-concept).
         </h1>
-        <Link to="/demo">Main Menu</Link>
         <Footer />
       </div>
     );

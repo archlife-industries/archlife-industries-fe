@@ -5,6 +5,10 @@
   margin-top: 10vh;
 }
 
+.blueBorder {
+  opacity: 0.2;
+}
+
 .footerLine {
   width: 80%;
   border: solid 1px black;
