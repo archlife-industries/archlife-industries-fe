@@ -6,15 +6,22 @@ import { Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import TrainingRoom from "./components/TrainingRoom";
 import LandingPage from "./components/LandingPage";
-import Footer from "./components/Footer";
+import Login from "./components/authentication/Login/Login";
+import Register from "./components/authentication/Register/Register";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navigation />
+
         <Route exact path="/" render={props => <LandingPage {...props} />} />
-        <Route path="/demo" render={props => <TrainingRoom {...props} testing={true}/>} />
+        <Route path="/login" render={props => <Login {...props} />} />
+        <Route path="/register" render={props => <Register {...props} />} />
+        <Route
+          path="/demo"
+          render={props => <TrainingRoom {...props} testing={true} />}
+        />
       </div>
     );
   }
