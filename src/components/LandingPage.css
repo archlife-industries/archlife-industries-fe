@@ -38,7 +38,7 @@ div.landing {
   align-items: center;
   flex-direction: column;
   padding: 5rem;
-  /* height: 80vh; */
+  height: 100vh;
 }
 
 div.landing h1 {

@@ -5,8 +5,8 @@
   flex-direction: row;
   background-color: black;
   border-bottom: 1px solid lightslategray;
-  height: 100vh;
-  /* padding-top: 2rem; */
+  height: 110vh;
+  padding-top: 4rem;
 }
 .tag {
   color: #282828;
