@@ -3,7 +3,7 @@
   text-align: center;
   padding: 20px;
   border: 2px solid black;
-  height: 800px;
+  height: 500px;
 }
 
 .light-container.selected {
@@ -13,17 +13,17 @@
   -webkit-animation: neon-blue 1s ease infinite;
 }
 
-.switch{
+.switch {
   margin-top: -40px;
-  margin-left:30px;
+  margin-left: 30px;
 }
 
-.switch img{
-  width:140px;
+.switch img {
+  width: 140px;
 }
 
-.lightBulb-container{
-    margin-top:160px;
+.lightBulb-container {
+  margin-top: 160px;
 }
 
 @keyframes neon-blue {

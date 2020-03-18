@@ -12,8 +12,48 @@
   padding-left: 30px;
 }
 
+div.landing h2 {
+  color: white;
+  font-weight: normal;
+}
+div.landing h3 {
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+div.landing h3.opc {
+  opacity: 0.5;
+}
+
 .colorfulLogo {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
+}
+
+div.landing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  /* height: 80vh; */
+}
+
+div.landing h1 {
+  display: inline-block;
+  /* padding-top: 10px; */
+  font-size: 32px;
+  font-weight: normal;
+  color: #3dbfe8;
+  text-align: justify;
+  line-height: 1.2rem;
+  margin-top: 0;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
 }
