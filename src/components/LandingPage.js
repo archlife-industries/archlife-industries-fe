@@ -19,7 +19,7 @@ class LandingPage extends Component {
           </h3>
 
           <h3 classname="opc">
-            After clicking the "record brainwave" buttom, you must think of one
+            After clicking the "record brainwave" button, you must think of one
             of the following <br /> four commands in order to adjust a
             thermostat and to turn a switch on or off.
           </h3>
