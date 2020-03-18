@@ -1,21 +1,59 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import LogoContainer from "./LogoContainer";
+
 import Footer from "./Footer";
+import "./LandingPage.css";
 
 class LandingPage extends Component {
   render() {
     return (
       <>
         <div className="container landing ">
-          <LogoContainer />
-          <h1>
-            Welcome to our proof-of-concept web app! We’ve built a basic,
-            interactive web app that can be directly controlled by the user’s
-            brain after they have paired an EEG-device to the app (currently
-            only one specific EEG-device product will be supported because it’s
-            a proof-of-concept).
-          </h1>
+          <h1>ARCHLIFE BETA INSTRUCTIONS</h1>
+          <h2>WELCOME TO OUR BRAIN-CONTROLLED PROOF OF CONCEPT WEB APP!</h2>
+
+          <h3>
+            Please make sure your OpenBCI devide is connected to your computer
+            via bluetooth. Currently, only specific EEG device is support
+            because this is a proof-of-concept
+          </h3>
+
+          <h3 classname="opc">
+            After clicking the "record brainwave" buttom, you must think of one
+            of the following four commands in order to adjust a thermostat and
+            to turn a list switch on or off.
+          </h3>
+          <div className="arrows">
+            <img
+              src={require("../assets/arrow-icons/up_arrow.png")}
+              width="150"
+              height="150"
+              alt="up arrow"
+            />
+            <img
+              src={require("../assets/arrow-icons/left_arrow.png")}
+              width="150"
+              height="150"
+              alt="left arrow"
+            />
+            <img
+              src={require("../assets/arrow-icons/down_arrow.png")}
+              width="150"
+              height="150"
+              alt="down arrow"
+            />
+            <img
+              src={require("../assets/arrow-icons/right_arrow.png")}
+              width="150"
+              height="150"
+              alt="right arrow"
+            />
+            <img
+              src={require("../assets/record_eeg_unclicked.png")}
+              width="150"
+              height="150"
+              alt="eeg record button"
+            />
+          </div>
         </div>
         <Footer />
       </>
