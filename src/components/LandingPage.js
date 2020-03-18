@@ -13,14 +13,15 @@ class LandingPage extends Component {
 
           <h3>
             Please make sure your OpenBCI devide is connected to your computer
-            via bluetooth. Currently, only specific EEG device is support
-            because this is a proof-of-concept
+            via bluetooth.
+            <br /> Currently, only specific EEG device is support because this
+            is a proof-of-concept
           </h3>
 
           <h3 classname="opc">
             After clicking the "record brainwave" buttom, you must think of one
-            of the following four commands in order to adjust a thermostat and
-            to turn a list switch on or off.
+            of the following <br /> four commands in order to adjust a
+            thermostat and to turn a switch on or off.
           </h3>
           <div className="arrows">
             <img
