@@ -53,6 +53,10 @@ const Register = props => {
             />
             <br />
             <button>Register</button>
+            <p>
+              NOTE: Upon clicking Register, please wait patiently <br /> for a
+              moment or two...
+            </p>
           </form>
         </div>
       </div>
