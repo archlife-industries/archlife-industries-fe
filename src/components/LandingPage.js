@@ -12,10 +12,10 @@ class LandingPage extends Component {
           <h2>WELCOME TO OUR BRAIN-CONTROLLED PROOF OF CONCEPT WEB APP!</h2>
 
           <h3>
-            Please make sure your OpenBCI devide is connected to your computer
+            Please make sure your OpenBCI device is connected to your computer
             via bluetooth.
-            <br /> Currently, only specific EEG device is support because this
-            is a proof-of-concept
+            <br /> Currently, only specific EEG device's is supported because
+            this is a proof-of-concept.
           </h3>
 
           <h3 classname="opc">
