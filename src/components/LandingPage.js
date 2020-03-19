@@ -7,7 +7,7 @@ class LandingPage extends Component {
   render() {
     return (
       <>
-        <div className="container landing ">
+        <div className="container landing">
           <h1>ARCHLIFE BETA INSTRUCTIONS</h1>
           <h2>WELCOME TO OUR BRAIN-CONTROLLED PROOF OF CONCEPT WEB APP!</h2>
 

@@ -29,7 +29,8 @@
 }
 
 .direction {
-  color: #24ccff;
+  /*color: #24ccff;*/
+  color: white;
   font-size: 60px;
   font-weight: bold;
   display: none;
@@ -44,23 +45,19 @@
 
 .direction.up {
   top: 70px;
+  bottom: initial;
 }
 
 .show {
   display: block;
-  opacity: 1;
+  opacity: 0.2;
   transform: translateY(0);
-  /*animation: blue-neon-text 1s ease infinite;*/
-  /*-moz-animation: blue-neon-text 1s ease infinite;*/
-  /*-webkit-animation: blue-neon-text 1s ease infinite;*/
 }
+
 .show-text {
   display: block;
   opacity: 1;
   transform: translateY(0);
-  /*animation: blue-neon-text 1s ease infinite;*/
-  /*-moz-animation: blue-neon-text 1s ease infinite;*/
-  /*-webkit-animation: blue-neon-text 1s ease infinite;*/
 }
 
 @keyframes blue-neon-text {

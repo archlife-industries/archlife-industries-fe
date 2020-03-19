@@ -12,6 +12,30 @@
   padding-left: 30px;
 }
 
+
+div.landing {
+  position:absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  top:30%;
+  left:50%;
+  transform: translate(-50%, -30%);
+}
+
+div.landing h1 {
+  display: inline-block;
+  /* padding-top: 10px; */
+  font-size: 32px;
+  font-weight: normal;
+  color: #3dbfe8;
+  text-align: justify;
+  line-height: 1.2rem;
+  margin-top: 0;
+}
+
 div.landing h2 {
   color: white;
   font-weight: normal;
@@ -30,26 +54,6 @@ div.landing h3.opc {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-}
-
-div.landing {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  padding: 5rem;
-  height: 100vh;
-}
-
-div.landing h1 {
-  display: inline-block;
-  /* padding-top: 10px; */
-  font-size: 32px;
-  font-weight: normal;
-  color: #3dbfe8;
-  text-align: justify;
-  line-height: 1.2rem;
-  margin-top: 0;
 }
 
 .arrows {

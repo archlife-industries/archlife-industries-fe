@@ -24,8 +24,15 @@
     display:none;
 }
 
+.selectedMessage.show{
+   opacity:1;
+}
 .selectedMessage span{
    color:#FF69B4;
+}
+
+.instruction{
+    color:#fbff00;
 }
 
 .eegButton {
